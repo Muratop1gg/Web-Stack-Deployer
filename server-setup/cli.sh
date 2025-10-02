@@ -158,6 +158,10 @@ case "${1:-help}" in
     "status")
         show_status
         ;;
+        # В секции case добавьте:
+    "view-maintenance")
+    run_module "05_nginx_setup.sh" && view_maintenance_page
+    ;;
     "help"|"-h"|"--help")
         show_help
         ;;
